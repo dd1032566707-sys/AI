@@ -1,0 +1,101 @@
+[
+  {
+    "name": "结月ゆかり",
+    "folder": "yukari_model",
+    "defs": [
+      "yukari_model.model.json"
+    ]
+  },
+  {
+    "name": "琪亚娜·卡斯兰娜",
+    "folder": "kiana",
+    "defs": [
+      "model.json"
+    ]
+  },
+  {
+    "name": "雷电芽衣",
+    "folder": "mei",
+    "defs": [
+      "model.json"
+    ]
+  },
+  {
+    "name": "布洛妮娅",
+    "folder": "bronya",
+    "defs": [
+      "model.json"
+    ]
+  },
+  {
+    "name": "雷姆",
+    "folder": "rem",
+    "defs": [
+      "model.json"
+    ]
+  },
+  {
+    "name": "樱",
+    "folder": "sakura",
+    "defs": [
+      "model.json"
+    ]
+  },
+  {
+    "name": "春",
+    "folder": "haru",
+    "defs": [
+      "haru_01.model.json",
+      "haru_02.model.json"
+    ]
+  },
+  {
+    "name": "初音未来",
+    "folder": "miku",
+    "defs": [
+      "miku.model.json"
+    ]
+  },
+  {
+    "name": "Unity娘",
+    "folder": "unitychan",
+    "defs": [
+      "unitychan.model.json"
+    ]
+  },
+  {
+    "name": "姬子",
+    "folder": "himeko",
+    "defs": [
+      "model.json"
+    ]
+  },
+  {
+    "name": "希儿",
+    "folder": "seele",
+    "defs": [
+      "model.json"
+    ]
+  },
+  {
+    "name": "德丽莎",
+    "folder": "theresa",
+    "defs": [
+      "model.json"
+    ]
+  },
+  {
+    "name": "辛",
+    "folder": "sin",
+    "defs": [
+      "model.json"
+    ]
+  },
+  {
+    "name": "狐娘",
+    "folder": "fox",
+    "defs": [
+      "model.json"
+    ]
+  }
+]

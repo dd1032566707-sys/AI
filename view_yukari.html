@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <title>Live2D · 多模型展示</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { height: 100%; }
+        body {
+            background: radial-gradient(circle at 50% 30%, #2a2d44 0%, #15161f 70%, #0c0d14 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+            color: #e8e8f0;
+            overflow: hidden;
+        }
+        .title {
+            position: fixed; top: 24px; left: 0; right: 0;
+            text-align: center; font-size: 18px; letter-spacing: 2px;
+            opacity: .85; font-weight: 600;
+        }
+        .title small { display:block; font-size:12px; opacity:.55; margin-top:4px; letter-spacing:1px; }
+        canvas#live2d {
+            display: block;
+            margin: auto;
+            cursor: grab;
+            /* 关键：画布内部用窄高比例(0.375)，与已验证的 imuncle 查看页一致，
+               引擎按宽度铺满模型时竖向立绘才能完整显示（不被裁头顶/脚底）。
+               CSS 只负责把 360x960 的位图放大显示，不改变内部渲染比例。 */
+            width: auto;
+            height: min(88vh, 960px);
+            filter: drop-shadow(0 12px 30px rgba(0,0,0,.45));
+        }
+        canvas#live2d:active { cursor: grabbing; }
+        .hint {
+            position: fixed; bottom: 18px; left: 0; right: 0;
+            text-align: center; font-size: 12px; opacity: .4;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">Live2D Cubism 2 · 多模型展示<small>左上角可自由切换模型 · 拖拽可互动</small></div>
+    <canvas id="live2d" width="360" height="960"></canvas>
+    <div class="hint">Powered by live2d.js · 模型来自 live2d-master 仓库</div>
+
+    <script src="js/live2d.js"></script>
+    <script src="js/switcher.js"></script>
+    <script>
+        // 初始化多模型切换器（清单由服务端 /models 或本地 model_manifest.json 提供）
+        window.initModelSwitcher("live2d");
+    </script>
+</body>
+</html>

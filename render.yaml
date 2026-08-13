@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: yukari-voice
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python serve.py
+    healthCheckPath: /
+    envVars:
+      - key: ZHIPU_API_KEY
+        sync: false
